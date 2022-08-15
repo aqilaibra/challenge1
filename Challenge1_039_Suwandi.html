@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+</head>
+<body>
+
+    <h2>Menghitung Luas dan Keliling Lingkaran</h2>
+    <label for="R">Jari-jari: </label>
+    <input type="number" id="R" /> <br/><br/>
+
+    <label for="phi">phi: </label>
+    <input type="text" placeholder="3,14"/> <br/><br/>
+
+    <button onclick="hitungLuas()">Hitung Luas</button>
+    <h3>Hasil: <span id="hasil Luas"></span></h3>
+
+    <button onclick="hitungKeliling()">Hitung Keliling</button>
+    <h3>Hasil: <span id="hasil Keliling"></span></h3>
+   
+    <script>
+        function hitungLuas(){
+            const phi="3.14";
+            let R = document.getElementById('R').value;
+            let luas = phi * R * R;
+            console.log(luas);
+
+            document.getElementById('hasil Luas').innerHTML = luas;
+        }
+        function hitungKeliling(){
+            const phi="3.14";
+            let R = document.getElementById('R').value;
+            let keliling = 2 * phi * R;
+            console.log(keliling);
+
+            document.getElementById('hasil Keliling').innerHTML = keliling;
+        }
+    </script>
+    
+</body>
+</html>
